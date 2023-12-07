@@ -1,0 +1,12 @@
+.image-logo {
+    cursor: pointer;
+}
+.image-logo:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 991px) {
+    .text-container {
+        opacity: 1 !important;
+    }
+}

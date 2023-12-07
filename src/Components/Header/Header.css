@@ -1,0 +1,158 @@
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px 0;
+    border-bottom: 1px solid #101010;
+}
+
+.navbar .desktop {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 1.5);
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li:first-child {
+    margin-left: 0;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar .mobile {
+    display: none;
+}
+
+.navbar .drawer-menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    right: -100vw;
+}
+
+.navbar img {
+    max-width: 200px;
+}
+
+.nav-menu a {
+    color: #bbbbbb;
+}
+
+.nav-menu a.active {
+    color: #FFF;
+}
+
+.nav-menu a:hover {
+    color: #FFF;
+}
+
+@media (max-width: 1350px) {
+    .navbar {
+        position: relative;
+    }
+}
+
+@media (max-width: 865px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    .navbar .mobile {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navbar .mobile .logo {
+        max-width: 150px;
+    }
+
+    .navbar .drawer-menu {
+        right: -100vw;
+    }
+
+    .navbar .burger-menu {
+        cursor: pointer;
+    }
+
+    .navbar .desktop {
+        display: none;
+    }
+
+    .navbar .mobile {
+        display: flex;
+    }
+
+    .drawer-menu.active {
+        display: flex;
+        flex-flow: column wrap;
+        right: 0vw;
+        background-color: #000;
+        padding-left: 40px;
+        padding-top: 100px;
+    }
+
+    .drawer-menu.active ul {
+        flex-flow: column wrap;
+    }
+
+    .drawer-menu.active ul li {
+        margin: 30px 0;
+        font-size: 28px;
+    }
+
+    .drawer-menu.active ul li:first-child {
+        margin-top: 0;
+    }
+
+    .drawer-menu.active ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .close-drawer {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar {
+        padding: 20px 12px;
+    }
+}

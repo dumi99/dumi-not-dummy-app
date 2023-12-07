@@ -1,0 +1,25 @@
+.social-container {
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.social img {
+    cursor: pointer;
+}
+
+.social-container h4 {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .social-container {
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    .social-container h4 {
+        display: block;
+    }
+}
